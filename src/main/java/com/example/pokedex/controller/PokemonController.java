@@ -14,13 +14,11 @@ public class PokemonController {
     @Autowired
     private PokemonService pokemonService;
 
-    // Endpoint to add a Pokémon
     @PostMapping
     public void addPokemon(@RequestBody Pokemon pokemon) {
         pokemonService.addPokemon(pokemon);
     } 
 
-    // Endpoint to get all Pokémon
     @GetMapping
     public List<Pokemon> getAllPokemon() {
         return pokemonService.getAllPokemon();
