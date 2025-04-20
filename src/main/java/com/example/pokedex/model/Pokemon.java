@@ -2,11 +2,13 @@ package com.example.pokedex.model;
 
 import java.util.Map;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "pokemon")
 public class Pokemon {
 
+    @Id
     private String id;
     private String name;
     private String[] type;
